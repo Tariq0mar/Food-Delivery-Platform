@@ -60,7 +60,8 @@
 - Why not `WebSockets`? (more complex, unnecessary for one-way updates, not ideal on bad networks)
 
 ### Implementation Details
-- TBD
+- Driver keep posting his location to server
+- in server we build a controller that use SSE to keep sending status to Client
 
 ---
 
