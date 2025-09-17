@@ -39,7 +39,7 @@
 - Why not `SSE`? (instant updates not needed)
 
 ### Implementation Details
-- TBD
+- simple request/response with time period for requesting
 
 ---
 
