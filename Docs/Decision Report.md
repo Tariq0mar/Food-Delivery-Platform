@@ -19,7 +19,7 @@
 - None
 
 ### Implementation Details
-- TBD
+- Clean Architecture
 
 ---
 
