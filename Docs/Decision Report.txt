@@ -1,0 +1,131 @@
+Feature 1: Customer Account Management
+	
+	Pattern 
+			synchronous communication (request–response)
+
+	Reasoning
+			high dependancies between stages of logging in (can't skip any one), need immediate response for request 
+			Data consistency
+
+	Trade-offs
+			Latency (user may see it slow if server is busy since he has to wait to each process to be finished before he can go to next one)
+
+	Alternatives Considered
+			nothing
+
+	Implementation Details
+			NO YET
+		
+
+======================================================================================================================
+Feature 2: Order Tracking For Customer
+ 
+ 	Pattern
+ 			Short Polling
+
+ 	Reasoning
+			Order status updates should feel real-time but don’t need to be instant
+
+ 	Trade-offs
+			Clients poll even when no status change has occurred
+			polling every (30s - 2m) can generate heavy traffic
+
+ 	Alternatives Considered
+			Why not SSE? (no need for instant updates)
+
+ 	Implementation Details
+			NO YET
+
+
+======================================================================================================================
+Feature 3: Driver Location Updates
+ 
+ 	Pattern
+ 			Server-Sent Events (SSE)
+
+ 	Reasoning
+ 			Almost Real time, one-way direction (driver send his location) and auto-reconnection (for unstable connection)
+
+ 	Trade-offs
+			more complex and need browser support
+
+ 	Alternatives Considered
+ 			Why not WebSockets? (more complex, no need for bi-directional ways and not good in bad network)
+
+ 	Implementation Details
+ 			NO YET
+
+======================================================================================================================
+Feature 4:Restaurant Order Notifications
+ 
+ 	Pattern
+ 			Server-Sent Events (SSE)
+
+ 	Reasoning
+ 			Almost Real time, one-way direction (customer send order to restaurant) and auto-reconnection (for unstable connection)
+
+ 	Trade-offs
+ 			more complex and need browser support
+
+ 	Alternatives Considered
+ 			Why not WebSockets? (more complex and no need for bi-directional ways)
+
+ 	Implementation Details
+ 			NO YET
+
+======================================================================================================================
+Feature 5:Restaurant Order Notifications
+ 
+ 	Pattern
+ 			WebSockets
+
+ 	Reasoning
+ 			Almost Real time and bidirectional channel
+
+ 	Trade-offs
+ 			more complex and need browser support
+
+ 	Alternatives Considered
+ 			Why not SSE? (one-way direction)
+
+ 	Implementation Details
+ 			NO YET
+
+======================================================================================================================
+
+Feature 6:System-Wide Announcement
+ 
+ 	Pattern
+ 			Publish-Subscribe (Pub/Sub) with Server-Sent Events (SSE)
+
+ 	Reasoning
+ 			(Pub/Sub) "no need for real time delay is accepted" + (SSE) "it is one-way push"
+
+ 	Trade-offs
+ 			nothing
+
+ 	Alternatives Considered
+ 			Why not WebSockets wit (Pub/Sub)? (more complex and no need for bi-directional ways)
+
+ 	Implementation Details
+ 			NO YET
+
+======================================================================================================================
+Feature 7:Image Upload for Menu Items
+ 
+ 	Pattern
+ 			Long Polling
+
+ 	Reasoning
+ 			reduces unnecessary calls and provides near real-time updates
+
+ 	Trade-offs
+ 			Each client holds an open connection
+
+ 	Alternatives Considered
+ 			Why not Short Polling? (many empty requests)
+
+ 	Implementation Details
+ 			NO YET
+
+======================================================================================================================
