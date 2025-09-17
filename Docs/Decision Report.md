@@ -82,7 +82,8 @@
 - Why not `WebSockets`? (more complex, unnecessary for one-way updates)
 
 ### Implementation Details
-- TBD
+- Restaurant build connection with Server
+- When Customer send order, server will use the SSE connection to send it directly to Restaurant
 
 ---
 
