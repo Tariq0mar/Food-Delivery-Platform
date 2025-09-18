@@ -104,7 +104,7 @@
 - Why not `SSE`? (only one-way push)
 
 ### Implementation Details
-- TBD
+- NOT YET
 
 ---
 
@@ -124,7 +124,7 @@
 - Why not `WebSockets` with Pub/Sub? (more complex, unnecessary for one-way updates)
 
 ### Implementation Details
-- TBD
+- NOT YET
 
 ---
 
