@@ -144,4 +144,4 @@
 - Why not `Short Polling`? (many empty requests)
 
 ### Implementation Details
-- TBD
+- Simple request/response with timer for processing
